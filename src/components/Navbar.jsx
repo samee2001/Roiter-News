@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#"><span className='badge bg-light text-danger'>NewsMag</span></a>
+        <a className="navbar-brand" href="#"><span className='badge bg-light text-danger fs-'>ROITER</span></a>
         <button 
           className="navbar-toggler" 
           type="button" 
