@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import NewsItem from './NewsItem'; // Ensure correct import path
 
-const NewsBoard = () => {
+const NewsBoard = ({category}) => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${import.meta.env.VITE_API_KEY}`;
+                let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
                 let response = await fetch(url);
                 let data = await response.json();
 
@@ -21,7 +21,7 @@ const NewsBoard = () => {
         };
 
         fetchNews();
-    }, []);
+    }, [category]);
 
     return (
         <div className="container mt-4">
