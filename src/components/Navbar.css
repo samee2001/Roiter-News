@@ -1,0 +1,12 @@
+/* Change category text color to red on hover */
+.category-link {
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: white; /* Default color */
+  }
+  
+  .category-link:hover {
+    color: red; /* Change color to red on hover */
+    cursor: pointer;
+  }
+  
